@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+a{ 
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+body{
+    background-color: rgb(50, 50, 50);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap:20px;
+}
+
+#searchCity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap:20px;
+}
+
+input[type=text]{
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border:2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding:2px;
+}
+
+#searchInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-size: 25px;
+}
+
+input[type=button]{
+    height: 30px;
+    width: 100px;
+    font-size: 18px;
+    font-weight:600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(213, 255, 149);
+    color:rgb(50, 50, 50)
+}
+
+#popularCity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+#popularCity input{
+    border-radius: 5px;
+    width: 150px;
+}
+
+#weatherCard{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    gap:10px;
+}
+
+#city{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#temp{
+    font-size: 50px;
+    font-weight: bold;
+}

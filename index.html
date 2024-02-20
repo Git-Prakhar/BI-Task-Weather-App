@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="searchCity">
+        <h1>
+            Search
+        </h1>
+        <div id="searchInput">
+            <label for="inpCity"><h4>City : </h4></label>
+            <input type="text" id="inpCity">
+            <input type="button" id="inpButton" value="Search" onclick="searchTemp()">
+        </div>
+    </div>
+    <div id="popularCity">
+        <input type="button" id="inpButton" value="Mumbai" onclick="showTemp('mumbai')">
+        <input type="button" id="inpButton" value="Kolkata" onclick="showTemp('kolkata')">
+        <input type="button" id="inpButton" value="Delhi" onclick="showTemp('delhi')">
+        <input type="button" id="inpButton" value="London" onclick="showTemp('london')">
+        <input type="button" id="inpButton" value="New York" onclick="showTemp('new york')">
+    </div>
+    <div id="weatherCard">
+        <div id="city">
+        </div>
+        <div id="temp">
+        </div>
+    </div>
+</body>
+
+</html>
