@@ -1,5 +1,13 @@
+// READ README.md to setup
+
 let lat, longitude;
 let loading = '<img src="./images/icons8-loading.gif" alt="">';
+
+// ENTER API KEY YOU GOT FROM API NINJA
+let apiKey = 'h0H74rmGjsz62kO87lWSzQ==4QD4ZjFUkjyIoqVd';
+
+// ENTER API KEY YOU GOT FROM GEO API
+let apiKey2 = '868b6c830b3c4abfa5292ac0638a9d09';
 
 async function getLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -15,8 +23,9 @@ async function getLocation() {
 
 getLocation();
 
+
 const getCity = async () => {
-    fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${longitude}&apiKey=yourAPI`)
+    fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${longitude}&apiKey=${apiKey2}`)
         .then(res => res.json())
         .then(res => getWeather(res.features[0].properties.city))
         .catch(err => console.log(err));
@@ -29,7 +38,7 @@ const getWeather = async (city) => {
     fetch('https://api.api-ninjas.com/v1/weather?city=' + city, {
         method: 'GET',
         headers: {
-            'X-Api-Key': "yourAPI",
+            'X-Api-Key': apiKey,
             'Content-Type': 'application/json'
         }
     }).then(res => res.json())
@@ -48,7 +57,7 @@ function showTemp(city) {
     fetch('https://api.api-ninjas.com/v1/weather?city=' + city, {
         method: 'GET',
         headers: {
-            'X-Api-Key': "yourAPI",
+            'X-Api-Key': apiKey,
             'Content-Type': 'application/json'
         }
     }).then(res => res.json())
